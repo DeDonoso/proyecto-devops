@@ -6,9 +6,25 @@ pipeline {
                 docker { image 'node:20.11.1-alpine3.19' }
             }
             stages {
-                stage('checkout') {
+                stage('Instalar') {
                     steps {
-                        echo "hola mundo"
+                       sh "npm install"
+                    }
+
+                }
+            }
+            stages {
+                stage('run test') {
+                    steps {
+                       sh "npm run test"
+                    }
+
+                }
+            }
+             stages {
+                stage('run build') {
+                    steps {
+                       sh "npm run build"
                     }
 
                 }
