@@ -11,12 +11,12 @@ pipeline {
                        sh 'npm install'
                     }
                 }
-                stage('ejecutar test') {
+                stage('run test') {
                     steps {
                        sh 'npm run test'
                     }
                  }
-                stage('ejecutar build') {
+                stage('run build') {
                     steps {
                        sh 'npm run build'
                     }
