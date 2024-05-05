@@ -4,6 +4,8 @@ import { dividir, multiplicar, restar, sumar } from "./calcular.js";
 const app = express();
 app.use(express.json());
 
+const ambiente = process.env.NODE_ENV || "desconocido"
+
 app.get("/", (req, res) => {
   res.send("hola mundo");
 });
