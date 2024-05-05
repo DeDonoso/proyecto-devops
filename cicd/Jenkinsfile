@@ -35,7 +35,7 @@ pipeline {
                         agent {
                               docker {
                                 image 'sonarsource/sonar-scanner-cli'
-                                args '--network="devops-infra_default"'
+                                args  '--network="devops-infra_default"'
                                 reuseNode true
                               }  
 
@@ -45,7 +45,6 @@ pipeline {
                                 sh 'sonar-scanner'
                             }
                        }
-
                    } 
                    stage('Quality Gate: Puerta de calidad'){
                         steps {
@@ -54,10 +53,7 @@ pipeline {
                             }
                         }
                    } 
-
             }
-           
-
          }    
 
 
