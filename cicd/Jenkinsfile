@@ -39,7 +39,9 @@ pipeline {
                     sh "docker push localhost:8082/mi-proyecto-devops:${env.BUILD_NUMBER}"
                         }
 
-            }
-    }
+                    }
+                }
 
+       }           
+    }
 }
