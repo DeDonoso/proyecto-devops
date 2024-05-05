@@ -31,7 +31,7 @@ pipeline {
 
         stage('Calidad del código') {  
             stages {
-                   stage('build & ssonarQube analysis'){
+                   stage('build & sonarQube analysis'){
                         agent {
                               docker {
                                 image 'sonarsource/sonar-scanner-cli'
@@ -42,7 +42,7 @@ pipeline {
                         }
                        steps {
                             withSonarQubeEnv('sonarqube'){
-                                sh 'sonar-scanner'
+                                sh './scr/sonar-scanner'
                             }
                        }
                    } 
