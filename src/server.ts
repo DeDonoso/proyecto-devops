@@ -23,5 +23,10 @@ app.post("/calcular", (req, res) => {
 });
 
 
+app.get("/ambiente", (req, res) => {
+  res.send(`Prueba de variable entorno con docker-compose: ${ambiente}`);
+});
+
+
 
 export default app;
