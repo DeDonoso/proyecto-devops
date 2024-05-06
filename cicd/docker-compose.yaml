@@ -7,7 +7,7 @@ services:
      environment:
       - NODE_ENV=development
      volumes:
-      - /tmp/ficheros-contenedor:/var/ficheros
+      - /Work-Space/ficheros-contenedor:/var/ficheros
 
 
   
